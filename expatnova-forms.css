@@ -1,73 +1,24 @@
-/*!
- * ExpatNova Forms Styling
- * Version: 1.1.0
- * Description: Styles globaux pour tous les formulaires Wix du site ExpatNova
- * Repository: https://github.com/expatnova/assets
- * License: Private - ExpatNova © 2025
- * 
- * Changelog v1.1.0:
- * - Fix bouton sélection pays (téléphone)
- * - Fix largeur et positionnement du formulaire
- */
+/* ============================================
+   EXPATNOVA - Wix Forms Custom Styling
+   ============================================ */
 
-/* ==================== BASE FORM CONTAINER ==================== */
-
-[id*="Form"],
-[id*="form"],
-.wix-form-container,
-form[data-testid*="form"],
-div[data-form-id] {
-    background-color: #F8F9FA !important;
-    padding: 2rem !important;
-    border-radius: 0.5rem !important;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+/* Cible tous les Wix Forms V2 */
+[id*="comp-"] form[id*="Form"],
+.wixui-form,
+[data-testid="formContainer"] {
+    background-color: transparent !important;
+    padding: 0 !important;
     max-width: 672px !important;
     margin: 0 auto !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    position: relative !important;
-    left: auto !important;
-    right: auto !important;
 }
 
-/* ==================== FORM FIELDS WRAPPER ==================== */
-
-[id*="Form"] > div,
-[id*="form"] > div,
-.wix-form-container > div {
-    margin-bottom: 1.5rem !important;
+/* Champs de formulaire */
+[id*="comp-"] form[id*="Form"] input[type="text"],
+[id*="comp-"] form[id*="Form"] input[type="email"],
+[id*="comp-"] form[id*="Form"] input[type="tel"],
+[id*="comp-"] form[id*="Form"] select,
+[id*="comp-"] form[id*="Form"] textarea {
     width: 100% !important;
-}
-
-/* ==================== LABELS ==================== */
-
-[id*="Form"] label,
-[id*="form"] label,
-.wix-form-container label,
-[id*="Form"] [class*="label"],
-[id*="form"] [class*="label"] {
-    display: block !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    color: #333333 !important;
-    margin-bottom: 0.5rem !important;
-    font-family: Inter, sans-serif !important;
-    line-height: 1.4 !important;
-}
-
-/* ==================== INPUTS & TEXTAREAS ==================== */
-
-[id*="Form"] input,
-[id*="Form"] select,
-[id*="Form"] textarea,
-[id*="form"] input,
-[id*="form"] select,
-[id*="form"] textarea,
-.wix-form-container input,
-.wix-form-container select,
-.wix-form-container textarea {
-    width: 100% !important;
-    max-width: 100% !important;
     padding: 0.5rem 1rem !important;
     border: 1px solid #A9A9A9 !important;
     border-radius: 0.375rem !important;
@@ -76,159 +27,34 @@ div[data-form-id] {
     font-size: 16px !important;
     font-family: Inter, sans-serif !important;
     line-height: 1.5 !important;
-    transition: all 0.2s ease !important;
     box-sizing: border-box !important;
 }
 
-[id*="Form"] textarea,
-[id*="form"] textarea,
-.wix-form-container textarea {
-    min-height: 150px !important;
-    max-height: 500px !important;
-    resize: vertical !important;
-}
-
-/* ==================== FOCUS STATES ==================== */
-
-[id*="Form"] input:focus,
-[id*="Form"] select:focus,
-[id*="Form"] textarea:focus,
-[id*="form"] input:focus,
-[id*="form"] select:focus,
-[id*="form"] textarea:focus {
-    outline: 2px solid #2557A7 !important;
-    outline-offset: 2px !important;
+/* Focus state */
+[id*="comp-"] form[id*="Form"] input:focus,
+[id*="comp-"] form[id*="Form"] select:focus,
+[id*="comp-"] form[id*="Form"] textarea:focus {
+    outline: none !important;
     border-color: #2557A7 !important;
     box-shadow: 0 0 0 3px rgba(37, 87, 167, 0.1) !important;
 }
 
-/* ==================== PHONE NUMBER COUNTRY SELECTOR FIX ==================== */
-
-[id*="Form"] [data-testid*="phone"],
-[id*="Form"] [class*="phone"],
-[id*="form"] [data-testid*="phone"],
-.wix-form-container [data-testid*="phone"] {
-    display: flex !important;
-    gap: 0.5rem !important;
-}
-
-[id*="Form"] button[aria-haspopup="listbox"],
-[id*="form"] button[aria-haspopup="listbox"],
-[id*="Form"] button[class*="country"],
-[id*="form"] button[class*="country"] {
-    width: auto !important;
-    min-width: 80px !important;
-    max-width: 100px !important;
-    padding: 0.5rem 0.75rem !important;
-    background-color: #FFFFFF !important;
-    border: 1px solid #A9A9A9 !important;
+/* Labels */
+[id*="comp-"] form[id*="Form"] label {
+    display: block !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
     color: #333333 !important;
-    font-size: 16px !important;
-    margin: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 0.5rem !important;
-    box-shadow: none !important;
-    border-radius: 0.375rem !important;
+    margin-bottom: 0.25rem !important;
+    font-family: Inter, sans-serif !important;
 }
 
-[id*="Form"] button[aria-haspopup="listbox"] svg,
-[id*="form"] button[aria-haspopup="listbox"] svg {
-    width: 20px !important;
-    height: 20px !important;
-    fill: #333333 !important;
-}
-
-[id*="Form"] button[aria-haspopup="listbox"]:hover,
-[id*="form"] button[aria-haspopup="listbox"]:hover {
-    background-color: #F8F9FA !important;
-    border-color: #2557A7 !important;
-    transform: none !important;
-}
-
-[id*="Form"] [data-testid*="phone"] input,
-[id*="form"] [data-testid*="phone"] input {
-    flex: 1 !important;
-    width: auto !important;
-}
-
-[id*="Form"] [role="listbox"],
-[id*="form"] [role="listbox"] {
-    background-color: #FFFFFF !important;
-    border: 1px solid #A9A9A9 !important;
-    border-radius: 0.375rem !important;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
-    max-height: 300px !important;
-    overflow-y: auto !important;
-    z-index: 1000 !important;
-}
-
-[id*="Form"] [role="option"],
-[id*="form"] [role="option"] {
-    padding: 0.5rem 1rem !important;
-    cursor: pointer !important;
-}
-
-[id*="Form"] [role="option"]:hover,
-[id*="form"] [role="option"]:hover {
-    background-color: #E9EFFB !important;
-}
-
-[id*="Form"] [role="option"][aria-selected="true"],
-[id*="form"] [role="option"][aria-selected="true"] {
+/* Bouton submit */
+[id*="comp-"] form[id*="Form"] button[type="submit"],
+[id*="comp-"] form[id*="Form"] button[data-testid="buttonElement"] {
+    display: inline-flex !important;
+    justify-content: center !important;
     background-color: #2557A7 !important;
-    color: #FFFFFF !important;
-}
-
-/* ==================== SELECT DROPDOWN STYLING ==================== */
-
-[id*="Form"] select,
-[id*="form"] select,
-.wix-form-container select {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333333' d='M6 9L1 4h10z'/%3E%3C/svg%3E") !important;
-    background-repeat: no-repeat !important;
-    background-position: right 0.75rem center !important;
-    background-size: 12px !important;
-    padding-right: 2.5rem !important;
-    cursor: pointer !important;
-}
-
-/* ==================== CHECKBOXES & RADIO ==================== */
-
-[id*="Form"] input[type="checkbox"],
-[id*="Form"] input[type="radio"],
-[id*="form"] input[type="checkbox"],
-[id*="form"] input[type="radio"] {
-    width: auto !important;
-    min-width: 1rem !important;
-    height: 1rem !important;
-    margin-top: 0.25rem !important;
-    margin-right: 0.75rem !important;
-    accent-color: #2557A7 !important;
-    cursor: pointer !important;
-}
-
-[id*="Form"] label:has(input[type="checkbox"]),
-[id*="Form"] label:has(input[type="radio"]),
-[id*="form"] label:has(input[type="checkbox"]),
-[id*="form"] label:has(input[type="radio"]) {
-    display: flex !important;
-    align-items: flex-start !important;
-    font-weight: 400 !important;
-}
-
-/* ==================== SUBMIT BUTTONS ==================== */
-
-[id*="Form"] button[type="submit"],
-[id*="form"] button[type="submit"],
-[id*="Form"] button:not([aria-haspopup]):not([class*="country"]),
-[id*="form"] button:not([aria-haspopup]):not([class*="country"]) {
-    background-color: #2557A7 !important;
-    background-image: none !important;
     color: #FFFFFF !important;
     font-weight: 600 !important;
     font-size: 18px !important;
@@ -236,85 +62,57 @@ div[data-form-id] {
     border-radius: 0.5rem !important;
     border: none !important;
     cursor: pointer !important;
-    width: auto !important;
-    min-width: 200px !important;
-    margin: 1.5rem auto 0 auto !important;
-    display: block !important;
-    font-family: Inter, sans-serif !important;
-    text-transform: none !important;
-    letter-spacing: normal !important;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
 }
 
-[id*="Form"] button[type="submit"]:hover,
-[id*="form"] button[type="submit"]:hover {
-    background-color: #1e4688 !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.15) !important;
+[id*="comp-"] form[id*="Form"] button[type="submit"]:hover,
+[id*="comp-"] form[id*="Form"] button[data-testid="buttonElement"]:hover {
+    background-color: rgba(37, 87, 167, 0.9) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
 }
 
-[id*="Form"] button[type="submit"]:disabled,
-[id*="form"] button[type="submit"]:disabled {
-    opacity: 0.6 !important;
-    cursor: not-allowed !important;
-    transform: none !important;
-}
-
-/* ==================== ERROR & SUCCESS MESSAGES ==================== */
-
-[id*="Form"] .error-message,
-[id*="Form"] [class*="error"],
-[id*="form"] .error-message {
+/* Messages d'erreur */
+[id*="comp-"] form[id*="Form"] .error-message,
+[id*="comp-"] form[id*="Form"] [role="alert"] {
     color: #DC3545 !important;
-    font-size: 0.875rem !important;
+    font-size: 14px !important;
     margin-top: 0.25rem !important;
-    font-weight: 400 !important;
 }
 
-[id*="Form"] .success-message,
-[id*="Form"] [class*="success"],
-[id*="form"] .success-message {
-    background-color: #28a745 !important;
-    color: white !important;
+/* Message de succès */
+[id*="comp-"] form[id*="Form"] .success-message {
+    background-color: #D4EDDA !important;
+    color: #155724 !important;
     padding: 1rem !important;
     border-radius: 0.375rem !important;
+    margin-top: 1rem !important;
     text-align: center !important;
-    margin-bottom: 1rem !important;
 }
 
-/* ==================== PLACEHOLDER STYLING ==================== */
-
-[id*="Form"] input::placeholder,
-[id*="Form"] textarea::placeholder,
-[id*="form"] input::placeholder,
-[id*="form"] textarea::placeholder {
-    color: #A9A9A9 !important;
-    opacity: 1 !important;
+/* Checkbox et radio */
+[id*="comp-"] form[id*="Form"] input[type="checkbox"],
+[id*="comp-"] form[id*="Form"] input[type="radio"] {
+    width: 1rem !important;
+    height: 1rem !important;
+    margin-right: 0.5rem !important;
+    accent-color: #2557A7 !important;
 }
 
-/* ==================== RESPONSIVE MOBILE ==================== */
-
+/* Responsive */
 @media (max-width: 768px) {
-    [id*="Form"],
-    [id*="form"],
-    .wix-form-container {
-        padding: 1.5rem !important;
+    [id*="comp-"] form[id*="Form"] {
+        padding: 0 1rem !important;
     }
     
-    [id*="Form"] button[type="submit"],
-    [id*="form"] button[type="submit"] {
+    [id*="comp-"] form[id*="Form"] button[type="submit"],
+    [id*="comp-"] form[id*="Form"] button[data-testid="buttonElement"] {
         width: 100% !important;
-        min-width: unset !important;
+        font-size: 16px !important;
     }
 }
 
-/* ==================== NEWSLETTER FORM ==================== */
-
-#newsletter-form,
-#newsletterForm {
-    max-width: 400px !important;
-    padding: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
+/* CAPTCHA styling */
+.grecaptcha-badge {
+    z-index: 1000 !important;
 }
