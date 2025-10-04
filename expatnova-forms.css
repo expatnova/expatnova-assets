@@ -277,6 +277,136 @@ div[data-form-id] {
     }
 }
 
+/* ==================== PHONE NUMBER COUNTRY SELECTOR FIX ==================== */
+
+/* Container du champ téléphone avec sélecteur pays */
+[id*="Form"] [data-testid*="phone"],
+[id*="Form"] [class*="phone"],
+[id*="form"] [data-testid*="phone"],
+[id*="form"] [class*="phone"],
+.wix-form-container [data-testid*="phone"] {
+    display: flex !important;
+    gap: 0.5rem !important;
+}
+
+/* Bouton de sélection du pays */
+[id*="Form"] [data-testid*="phone"] button,
+[id*="Form"] [class*="phone"] button,
+[id*="Form"] button[class*="country"],
+[id*="Form"] button[aria-haspopup="listbox"],
+[id*="form"] button[aria-haspopup="listbox"] {
+    width: auto !important;
+    min-width: 80px !important;
+    max-width: 100px !important;
+    padding: 0.5rem 0.75rem !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid #A9A9A9 !important;
+    color: #333333 !important;
+    font-size: 16px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.5rem !important;
+}
+
+/* Icône du drapeau dans le bouton */
+[id*="Form"] button[aria-haspopup="listbox"] svg,
+[id*="form"] button[aria-haspopup="listbox"] svg {
+    width: 20px !important;
+    height: 20px !important;
+    fill: #333333 !important;
+}
+
+/* Dropdown arrow */
+[id*="Form"] button[aria-haspopup="listbox"]::after,
+[id*="form"] button[aria-haspopup="listbox"]::after {
+    content: "" !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 4px solid transparent !important;
+    border-right: 4px solid transparent !important;
+    border-top: 4px solid #333333 !important;
+    margin-left: 0.25rem !important;
+}
+
+/* Hover state du bouton pays */
+[id*="Form"] button[aria-haspopup="listbox"]:hover,
+[id*="form"] button[aria-haspopup="listbox"]:hover {
+    background-color: #F8F9FA !important;
+    border-color: #2557A7 !important;
+}
+
+/* Input téléphone (à côté du bouton pays) */
+[id*="Form"] [data-testid*="phone"] input,
+[id*="Form"] [class*="phone"] input,
+[id*="form"] [data-testid*="phone"] input {
+    flex: 1 !important;
+    width: auto !important;
+}
+
+/* Dropdown menu du sélecteur pays */
+[id*="Form"] [role="listbox"],
+[id*="form"] [role="listbox"],
+div[data-testid*="country-list"] {
+    background-color: #FFFFFF !important;
+    border: 1px solid #A9A9A9 !important;
+    border-radius: 0.375rem !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+    max-height: 300px !important;
+    overflow-y: auto !important;
+    z-index: 1000 !important;
+}
+
+/* Options du dropdown pays */
+[id*="Form"] [role="option"],
+[id*="form"] [role="option"] {
+    padding: 0.5rem 1rem !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s !important;
+}
+
+[id*="Form"] [role="option"]:hover,
+[id*="form"] [role="option"]:hover {
+    background-color: #E9EFFB !important;
+}
+
+[id*="Form"] [role="option"][aria-selected="true"],
+[id*="form"] [role="option"][aria-selected="true"] {
+    background-color: #2557A7 !important;
+    color: #FFFFFF !important;
+}
+
+/* ==================== FORM POSITIONING & WIDTH OVERRIDE ==================== */
+
+/* Forcer la largeur et le centrage du formulaire Wix */
+#contactForm,
+[id*="contactForm"],
+div[data-form-id="contactForm"] {
+    width: 100% !important;
+    max-width: 672px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+}
+
+/* Si le formulaire est dans un wrapper Wix */
+#contactForm > div:first-child,
+[id*="contactForm"] > div:first-child {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Override des styles inline Wix (dernier recours) */
+#contactForm[style],
+[id*="contactForm"][style] {
+    width: 100% !important;
+    max-width: 672px !important;
+}
+
 /* ==================== NEWSLETTER FORM (FOOTER) ==================== */
 
 #newsletter-form,
@@ -330,3 +460,4 @@ div[data-form-id] {
 .wix-form-container [class*="wix-"] {
     font-family: Inter, sans-serif !important;
 }
+
