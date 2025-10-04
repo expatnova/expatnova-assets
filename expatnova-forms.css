@@ -1,0 +1,127 @@
+/* ==================== EXPATNOVA FORMS - GLOBAL STYLES ==================== */
+
+/* Base Form Container */
+[id*="Form"],
+.wix-form-container,
+form[data-testid*="form"] {
+    background-color: #F8F9FA !important;
+    padding: 2rem !important;
+    border-radius: 0.5rem !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+    max-width: 672px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+}
+
+/* All Form Inputs */
+[id*="Form"] input,
+[id*="Form"] select,
+[id*="Form"] textarea,
+.wix-form-container input,
+.wix-form-container select,
+.wix-form-container textarea {
+    width: 100% !important;
+    padding: 0.5rem 1rem !important;
+    border: 1px solid #A9A9A9 !important;
+    border-radius: 0.375rem !important;
+    background-color: #FFFFFF !important;
+    color: #333333 !important;
+    font-size: 16px !important;
+    font-family: Inter, sans-serif !important;
+    line-height: 1.5 !important;
+    transition: all 0.2s !important;
+}
+
+/* Focus States */
+[id*="Form"] input:focus,
+[id*="Form"] select:focus,
+[id*="Form"] textarea:focus {
+    outline: 2px solid #2557A7 !important;
+    border-color: #2557A7 !important;
+    box-shadow: 0 0 0 3px rgba(37, 87, 167, 0.1) !important;
+}
+
+/* Labels */
+[id*="Form"] label,
+.wix-form-container label {
+    display: block !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #333333 !important;
+    margin-bottom: 0.5rem !important;
+    font-family: Inter, sans-serif !important;
+}
+
+/* Textarea */
+[id*="Form"] textarea {
+    min-height: 150px !important;
+    resize: vertical !important;
+}
+
+/* Submit Buttons */
+[id*="Form"] button[type="submit"],
+[id*="Form"] button,
+.wix-form-container button {
+    background-color: #2557A7 !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    padding: 0.75rem 2rem !important;
+    border-radius: 0.5rem !important;
+    border: none !important;
+    cursor: pointer !important;
+    min-width: 200px !important;
+    margin: 1rem auto 0 auto !important;
+    display: block !important;
+    transition: all 0.3s !important;
+    font-family: Inter, sans-serif !important;
+}
+
+[id*="Form"] button:hover {
+    background-color: #1e4688 !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Error Messages */
+[id*="Form"] .error-message,
+[id*="Form"] [class*="error"] {
+    color: #DC3545 !important;
+    font-size: 0.875rem !important;
+    margin-top: 0.25rem !important;
+}
+
+/* Success Messages */
+[id*="Form"] .success-message,
+[id*="Form"] [class*="success"] {
+    background-color: #28a745 !important;
+    color: white !important;
+    padding: 1rem !important;
+    border-radius: 0.375rem !important;
+    text-align: center !important;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    [id*="Form"],
+    .wix-form-container {
+        padding: 1.5rem !important;
+    }
+    
+    [id*="Form"] button {
+        width: 100% !important;
+        font-size: 16px !important;
+    }
+}
+
+/* ==================== SPECIFIC FORMS (si besoin de variantes) ==================== */
+
+/* Contact Form - Variante si besoin */
+#contactForm {
+    /* Styles spécifiques au contact */
+}
+
+/* Newsletter Form */
+#newsletterForm {
+    max-width: 400px !important;
+    padding: 1rem !important;
+}
